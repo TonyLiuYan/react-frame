@@ -75,3 +75,10 @@ npm install --save-dev babel-loader @babel/core
 - 创建html文件
 - 使用loader翻译react文件
 - 已引用，但未使用时，会打包进打包文件，使文件变得很大
+
+
+
+# 参考项目
+
+- create-react-app
+- taxchina
