@@ -4,7 +4,7 @@
   "description": "基于前端技术一步一步搭建基础框架",
   "main": "index.js",
   "scripts": {
-    "webpack":"webpack --config ./webpack/webpack.config.js",
+    "webpack": "webpack --config ./webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,18 @@
   },
   "homepage": "https://github.com/TonyLiuYan/react-frame#readme",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }

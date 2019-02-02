@@ -29,9 +29,49 @@ src
 
 # 生产依赖包
 
-
+- react
+- react-dom
 
 # 开发依赖包
 
 - webpack：打包工具
 - webpack-cli：打包工具
+- html-webpack-plugin：简单创建 HTML 文件，用于服务器访问
+- babel：npm install --save-dev @babel/core @babel/cli @babel/preset-env
+
+- @babel/preset-react：babel解析react语法
+
+
+
+# webpack
+
+- ## Loaders
+
+  - 
+
+- ## Plugins
+
+  - html-webpack-plugin：简单创建 HTML 文件，用于服务器访问
+
+
+
+
+
+# babel设置
+
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install --save @babel/polyfill
+
+webpack:
+
+npm install --save-dev babel-loader @babel/core
+
+通过babel-loader的方式进行配置
+
+# 代码规范配置
+
+# Todo：
+
+- 创建html文件
+- 使用loader翻译react文件
+- 已引用，但未使用时，会打包进打包文件，使文件变得很大
