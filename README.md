@@ -72,9 +72,10 @@ npm install --save-dev babel-loader @babel/core
 
 # Todo：
 
-- 创建html文件
-- 使用loader翻译react文件
-- 已引用，但未使用时，会打包进打包文件，使文件变得很大
+- 创建html文件 done
+- 使用loader翻译react语法 done
+- 已引用，但未使用时，会打包进打包文件，使文件变得很大 
+- 创建WebpackDevServer开发环境的配置
 
 
 
