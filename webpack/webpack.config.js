@@ -6,7 +6,6 @@ const appDirectory = fs.realpathSync(process.cwd())
 const src = path.resolve(appDirectory, 'src')
 
 const config = {
-    mode: 'development',
     entry: path.resolve(appDirectory, 'src/index.js'),
     output: {
         path: path.resolve(appDirectory, 'dist'),
@@ -35,7 +34,8 @@ const config = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.resolve(appDirectory, 'webpack/index.html')
-        })
+        }),
+        // new BundleAnalyzerPlugin()//分析打包图 需要的时候打开
     ]
 }
 
