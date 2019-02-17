@@ -13,7 +13,8 @@ const config = {
     },
     resolve: {
         alias: {
-            pages: path.resolve(src, 'pages')
+            '@pages': path.resolve(src, 'pages'),
+            '@components': path.resolve(src, 'components')
         }
     },
     module: {
@@ -24,7 +25,9 @@ const config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        presets: [
+                            '@babel/preset-env',
+                            '@babel/preset-react'],
                         plugins: [
                             ["import",
                                 {
@@ -32,7 +35,8 @@ const config = {
                                     "libraryDirectory": "es",
                                     "style": "css" // `style: true` 会加载 less 文件
                                 }
-                            ]
+                            ],
+                            ['@babel/plugin-proposal-class-properties']
                         ]
                     },
 
