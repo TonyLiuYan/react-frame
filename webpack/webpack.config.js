@@ -19,14 +19,38 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
-                    }
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        plugins: [
+                            ["import",
+                                {
+                                    "libraryName": "antd",
+                                    "libraryDirectory": "es",
+                                    "style": "css" // `style: true` 会加载 less 文件
+                                }
+                            ]
+                        ]
+                    },
+
                 }
+            },
+            {
+                test: /\.(less|css)$/,
+                use: [
+                    {
+                        loader: "style-loader" // creates style nodes from JS strings
+                    },
+                    {
+                        loader: "css-loader" // translates CSS into CommonJS
+                    },
+                    {
+                        loader: "less-loader" // compiles Less to CSS
+                    }
+                ]
             }
         ],
     },

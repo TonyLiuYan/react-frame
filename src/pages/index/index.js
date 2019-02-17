@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import './index.less'
+import { Button } from 'antd'
 
 class Index extends Component {
     render() {
         return (
-
-            <div>hello world</div>
-
+            <Fragment>
+                <div className='test'>hello world</div>
+                <Button>button</Button>
+            </Fragment>
         );
     }
 }
