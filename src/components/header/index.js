@@ -1,33 +1,41 @@
 import React, { Component, Fragment } from 'react';
 import './index.less'
 import { Menu, Icon } from 'antd';
+import Login from '@components/login'
+import { observer, inject } from 'mobx-react'
 
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
-
+@inject('store')
+@observer
 class Index extends Component {
 
-    state = {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
     }
 
+
     handleClick = (e) => {
-        console.log('click ', e);
+        if (e.key === 'login') {
+            this.props.store.login.show()
+        }
 
     }
 
     render() {
         return (
-            <Menu
-                onClick={this.handleClick}
-                selectedKeys={[this.state.current]}
-                mode="horizontal"
-            >
-                <Menu.Item key="login" className='right'>
-                    <Icon type="cloud" theme="twoTone" />登录
-                </Menu.Item>
-            </Menu>
-        );
+            <Fragment>
+                <Menu
+                    onClick={this.handleClick}
+                    mode="horizontal"
+                >
+                    <Menu.Item key="login" className='right'>
+                        <Icon type="cloud" theme="twoTone" />登录
+                    </Menu.Item>
+                </Menu>
+                <Login></Login>
+            </Fragment>
+        )
     }
 }
 

@@ -14,7 +14,8 @@ const config = {
     resolve: {
         alias: {
             '@pages': path.resolve(src, 'pages'),
-            '@components': path.resolve(src, 'components')
+            '@components': path.resolve(src, 'components'),
+            '@stores': path.resolve(src, 'stores')
         }
     },
     module: {
@@ -36,7 +37,8 @@ const config = {
                                     "style": "css" // `style: true` 会加载 less 文件
                                 }
                             ],
-                            ['@babel/plugin-proposal-class-properties']
+                            ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                            ["@babel/plugin-proposal-class-properties", { "loose": true }]
                         ]
                     },
 
