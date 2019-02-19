@@ -1,13 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import './index.less'
-import { Button } from 'antd'
 import Header from '@components/header'
 import { Provider  }  from 'mobx-react'
-import login from '@stores/login'
+import store from '@stores'
 
-const store = {
-    login
-}
+
 
 class Index extends Component {
     render() {
